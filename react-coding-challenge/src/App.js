@@ -19,16 +19,25 @@ class App extends Component {
         this.setState({data: result})
       })
     }
+
   render() {
 
-    let listOfApplications = []
+    let applications = []
+    let listAppli = []
 
     if (this.state.data.length === 0) {
-      listOfApplications = 'loading';
+      applications = 'loading';
     }
-    else listOfApplications = this.state.data[0].id;
+    else{
+      applications= this.state.data;
+      listAppli = applications.map(appli => 
+      <li>{appli.id} ===> {appli.owner}</li>);
+    } 
 
-    console.log(this.state)
+    console.log(applications)
+
+    
+
 
     return (
 
@@ -38,7 +47,7 @@ class App extends Component {
         </header>
         <main>
           <p>voici ma liste : </p> 
-          <ul><li>{listOfApplications}</li></ul>
+          <ul>{listAppli}</ul>
           <button onClick={() => console.log(`Bonjour !`)}>
             Trier
           </button>
