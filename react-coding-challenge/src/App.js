@@ -14,22 +14,21 @@ class App extends Component {
       .then((response) =>{
         return response.json()
       })
-      .then((json) => {
-        console.log(json)
-      })
+
       .then((result) =>{
         this.setState({data: result})
       })
     }
   render() {
 
-    let listOfApplications
+    let listOfApplications = []
 
-    if (this.data === undefined) {
+    if (this.state.data.length === 0) {
       listOfApplications = 'loading';
     }
     else listOfApplications = this.state.data[0].id;
-    
+
+    console.log(this.state)
 
     return (
 
