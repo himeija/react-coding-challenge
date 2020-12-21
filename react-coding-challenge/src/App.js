@@ -24,6 +24,7 @@ class App extends Component {
 
     let applications = []
     let listAppli = []
+    let listAppliReverse = []
 
     if (this.state.data.length === 0) {
       applications = 'loading';
@@ -31,7 +32,10 @@ class App extends Component {
     else{
       applications= this.state.data;
       listAppli = applications.map(appli => 
-      <li>{appli.id} ===> {appli.owner}</li>);
+      <div className="ListAppli">
+        <div className="AppliId">{appli.id}</div>
+        <div className="AppliOwner">{appli.owner}</div>
+      </div>);
     } 
 
     console.log(applications)
@@ -43,14 +47,14 @@ class App extends Component {
 
       <div className="App">
         <header className="App-header">
-          <p>Ici le titre de mon appli trop cool qui va charger et visualiser un fichier json</p>
+          <p>Voici la liste des applications de Hollusion</p>
         </header>
         <main>
-          <p>voici ma liste : </p> 
-          <ul>{listAppli}</ul>
-          <button onClick={() => console.log(`Bonjour !`)}>
+        <button className="SortingButton" onClick={() => 
+            console.log(`Coucou !`)}>
             Trier
           </button>
+          <ul>{listAppli}</ul>
         </main>
       </div>
     );

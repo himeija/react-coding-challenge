@@ -28,6 +28,45 @@
   color: #61dafb;
 }
 
+.ListAppli {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.AppliId{
+  background-color: #282c34;
+  color:white;
+  min-width: 200px;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.AppliOwner{
+  background-color: #63676e;
+  color:white;
+  min-width: 300px;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.SortingButton{
+  appearance:none ;
+  background-color: mediumpurple;
+  width: 200px;
+  border: none;
+  outline-style:none;
+  padding: 15px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.SortingButton:hover{
+  background-color: rgb(187, 160, 240);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
