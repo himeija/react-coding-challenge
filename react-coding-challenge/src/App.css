@@ -38,7 +38,7 @@
 .AppliId{
   background-color: #282c34;
   color:white;
-  min-width: 200px;
+  width: 200px;
   margin-top: 5px;
   padding: 10px;
 }
@@ -51,18 +51,39 @@
   padding: 10px;
 }
 
-.SortingButton{
-  appearance:none ;
+.Sorting-bar{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.Sorting-button{
   background-color: mediumpurple;
-  width: 200px;
+  width: 220px;
+  padding: 10px;
   border: none;
   outline-style:none;
-  padding: 15px;
-  margin-top: 10px;
   transition: 0.3s;
 }
 
-.SortingButton:hover{
+.Sorting-search{
+  width: 200px;
+  padding: 10px;
+}
+
+.Sorting-search-button{
+  background-color: mediumpurple;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  outline-style:none;
+  transition: 0.3s;
+}
+
+.Sorting-button:hover, .Sorting-search-button:hover{
   background-color: rgb(187, 160, 240);
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }

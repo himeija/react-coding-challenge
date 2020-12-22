@@ -24,7 +24,6 @@ class App extends Component {
 
     let applications = []
     let listAppli = []
-    let listAppliReverse = []
 
     if (this.state.data.length === 0) {
       applications = 'loading';
@@ -40,9 +39,6 @@ class App extends Component {
 
     console.log(applications)
 
-    
-
-
     return (
 
       <div className="App">
@@ -50,17 +46,27 @@ class App extends Component {
           <p>Voici la liste des applications de Hollusion</p>
         </header>
         <main>
-        <button className="SortingButton" onClick={() => 
-            console.log(`Coucou !`)}>
-            Trier
-          </button>
-          <ul>{listAppli}</ul>
+          <div className="Sorting-bar">
+            <button className="Sorting-button" onClick={() => 
+            console.log(applications.reverse())}>
+            Trier ⯆
+            </button>
+            <input className="Sorting-search" type="text" name="search" />
+            <button className="Sorting-search-button" onClick={() => 
+            console.log('recherche')}>
+            recherche
+            </button>
+          </div>
+          <div>{listAppli}</div>
         </main>
       </div>
     );
   }
 }
 
+function reverseList(){
+
+}
 
 
 export default App;
